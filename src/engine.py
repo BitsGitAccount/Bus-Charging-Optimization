@@ -428,7 +428,13 @@ class SimulationEngine:
         station_ids = [s.id for s in ordered_stations]
 
         # Find current position in the route
-        if current == self.route_manager.origin if self._is_forward_direction(direction) else self.route_manager.destination:
+        # Determine the start node based on direction
+        if self._is_forward_direction(direction):
+            start_node = self.route_manager.origin
+        else:
+            start_node = self.route_manager.destination
+
+        if current == start_node:
             # Starting from origin/destination - next is first station or destination
             if station_ids:
                 return station_ids[0]

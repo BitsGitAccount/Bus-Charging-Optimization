@@ -210,7 +210,7 @@ def render_sidebar() -> tuple[Optional[ScenarioInput], OperationalWeights, bool]
     run_clicked = st.sidebar.button(
         "Run Simulation",
         type="primary",
-        use_container_width=True
+        width="stretch"
     )
 
     # Display scenario info
@@ -238,7 +238,7 @@ def render_input_schedule(scenario: ScenarioInput) -> None:
         df = create_bus_schedule_df(scenario)
         st.dataframe(
             df,
-            use_container_width=True,
+            width="stretch",
             hide_index=True,
             column_config={
                 "Departure (mins)": st.column_config.NumberColumn(
@@ -269,7 +269,7 @@ def render_bus_results(results: Dict[str, Any]) -> None:
     df = create_bus_results_df(results)
     st.dataframe(
         df,
-        use_container_width=True,
+        width="stretch",
         hide_index=True,
         column_config={
             "Completed": st.column_config.TextColumn(
@@ -304,7 +304,7 @@ def render_bus_results(results: Dict[str, Any]) -> None:
         itinerary_df = create_itinerary_df(bus_data["itinerary"])
         st.dataframe(
             itinerary_df,
-            use_container_width=True,
+            width="stretch",
             hide_index=True
         )
 
@@ -343,7 +343,7 @@ def render_station_results(results: Dict[str, Any]) -> None:
                 charge_df = create_station_charge_log_df(station_data["charge_log"])
                 st.dataframe(
                     charge_df,
-                    use_container_width=True,
+                    width="stretch",
                     hide_index=True
                 )
             else:

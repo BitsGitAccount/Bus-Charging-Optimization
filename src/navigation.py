@@ -503,6 +503,7 @@ class RouteManager:
         while station_index < len(stations):
             # Find the furthest station reachable from current position
             furthest_reachable: Optional[str] = None
+            furthest_index = station_index
 
             for i in range(station_index, len(stations)):
                 station = stations[i]
@@ -511,7 +512,7 @@ class RouteManager:
                 )
                 if not self._exceeds_range(distance, self.max_range_km):
                     furthest_reachable = station.id
-                    station_index = i + 1
+                    furthest_index = i + 1
                 else:
                     break
 
@@ -521,6 +522,7 @@ class RouteManager:
 
             required.append(furthest_reachable)
             current_node = furthest_reachable
+            station_index = furthest_index
 
             # Check if we can reach destination from here
             distance_to_end = self.get_effective_distance(

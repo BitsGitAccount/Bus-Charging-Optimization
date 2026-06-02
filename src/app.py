@@ -1,3 +1,17 @@
+import os
+import sys
+
+# Dynamically find the project root directory and inject it into sys.path
+# This ensures absolute 'src.' imports work seamlessly both locally and on Streamlit Cloud
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
+
+# --- Your existing imports continue below ---
+import streamlit as st
+from src.models import OperationalWeights, ScenarioInput
+# ... the rest of your imports
+
 """
 Streamlit Application Frontend
 

@@ -1,17 +1,5 @@
 from __future__ import annotations
 
-"""
-Streamlit Application Frontend
-
-This module implements the web-based UI for the Electric Bus Scheduling Engine.
-Users can load scenarios, configure parameters, run simulations, and visualize results.
-
-The UI is a pure rendering layer that delegates all computation to the backend engine.
-See ADR/0005_user_interface_design.md for architectural decisions.
-
-Launch with: streamlit run src/app.py
-"""
-
 import json
 import os
 from pathlib import Path

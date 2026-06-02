@@ -1,0 +1,48 @@
+{
+  "id": "scenario_5",
+  "description": "Worst Case Convergence - All 20 buses dispatched tightly every 8 minutes, stress testing queue management",
+  "weights": {
+    "individual": 1.0,
+    "operator": 1.0,
+    "overall": 1.0
+  },
+  "route": {
+    "origin": "Bengaluru",
+    "destination": "Kochi",
+    "stations": [
+      {"id": "A", "name": "Station A", "distance_from_origin_km": 100.0, "charger_count": 2},
+      {"id": "B", "name": "Station B", "distance_from_origin_km": 220.0, "charger_count": 2},
+      {"id": "C", "name": "Station C", "distance_from_origin_km": 320.0, "charger_count": 2},
+      {"id": "D", "name": "Station D", "distance_from_origin_km": 440.0, "charger_count": 2}
+    ],
+    "segment_distances": {
+      "Bengaluru→A": 100.0,
+      "A→B": 120.0,
+      "B→C": 100.0,
+      "C→D": 120.0,
+      "D→Kochi": 100.0
+    }
+  },
+  "buses": [
+    {"id": "BUS_01", "operator": "KSRTC", "direction": "Bengaluru→Kochi", "departure_time_mins": "19:00"},
+    {"id": "BUS_02", "operator": "KSRTC", "direction": "Kochi→Bengaluru", "departure_time_mins": "19:00"},
+    {"id": "BUS_03", "operator": "KSRTC", "direction": "Bengaluru→Kochi", "departure_time_mins": "19:08"},
+    {"id": "BUS_04", "operator": "KSRTC", "direction": "Kochi→Bengaluru", "departure_time_mins": "19:08"},
+    {"id": "BUS_05", "operator": "KSRTC", "direction": "Bengaluru→Kochi", "departure_time_mins": "19:16"},
+    {"id": "BUS_06", "operator": "KSRTC", "direction": "Kochi→Bengaluru", "departure_time_mins": "19:16"},
+    {"id": "BUS_07", "operator": "KPN", "direction": "Bengaluru→Kochi", "departure_time_mins": "19:24"},
+    {"id": "BUS_08", "operator": "KPN", "direction": "Kochi→Bengaluru", "departure_time_mins": "19:24"},
+    {"id": "BUS_09", "operator": "KPN", "direction": "Bengaluru→Kochi", "departure_time_mins": "19:32"},
+    {"id": "BUS_10", "operator": "KPN", "direction": "Kochi→Bengaluru", "departure_time_mins": "19:32"},
+    {"id": "BUS_11", "operator": "KSRTC", "direction": "Bengaluru→Kochi", "departure_time_mins": "19:40"},
+    {"id": "BUS_12", "operator": "KSRTC", "direction": "Kochi→Bengaluru", "departure_time_mins": "19:40"},
+    {"id": "BUS_13", "operator": "KPN", "direction": "Bengaluru→Kochi", "departure_time_mins": "19:48"},
+    {"id": "BUS_14", "operator": "KPN", "direction": "Kochi→Bengaluru", "departure_time_mins": "19:48"},
+    {"id": "BUS_15", "operator": "KSRTC", "direction": "Bengaluru→Kochi", "departure_time_mins": "19:56"},
+    {"id": "BUS_16", "operator": "KSRTC", "direction": "Kochi→Bengaluru", "departure_time_mins": "19:56"},
+    {"id": "BUS_17", "operator": "KPN", "direction": "Bengaluru→Kochi", "departure_time_mins": "20:04"},
+    {"id": "BUS_18", "operator": "KPN", "direction": "Kochi→Bengaluru", "departure_time_mins": "20:04"},
+    {"id": "BUS_19", "operator": "KSRTC", "direction": "Bengaluru→Kochi", "departure_time_mins": "20:12"},
+    {"id": "BUS_20", "operator": "KSRTC", "direction": "Kochi→Bengaluru", "departure_time_mins": "20:12"}
+  ]
+}

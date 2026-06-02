@@ -1,0 +1,48 @@
+{
+  "id": "scenario_2",
+  "description": "Bunched Start - 10 Bengaluru→Kochi and 10 Kochi→Bengaluru buses, departing every 8 minutes from 19:00",
+  "weights": {
+    "individual": 1.0,
+    "operator": 1.0,
+    "overall": 1.0
+  },
+  "route": {
+    "origin": "Bengaluru",
+    "destination": "Kochi",
+    "stations": [
+      {"id": "A", "name": "Station A", "distance_from_origin_km": 100.0, "charger_count": 2},
+      {"id": "B", "name": "Station B", "distance_from_origin_km": 220.0, "charger_count": 2},
+      {"id": "C", "name": "Station C", "distance_from_origin_km": 320.0, "charger_count": 2},
+      {"id": "D", "name": "Station D", "distance_from_origin_km": 440.0, "charger_count": 2}
+    ],
+    "segment_distances": {
+      "Bengaluru→A": 100.0,
+      "A→B": 120.0,
+      "B→C": 100.0,
+      "C→D": 120.0,
+      "D→Kochi": 100.0
+    }
+  },
+  "buses": [
+    {"id": "BK_01", "operator": "KSRTC", "direction": "Bengaluru→Kochi", "departure_time_mins": "19:00"},
+    {"id": "BK_02", "operator": "KSRTC", "direction": "Bengaluru→Kochi", "departure_time_mins": "19:08"},
+    {"id": "BK_03", "operator": "KSRTC", "direction": "Bengaluru→Kochi", "departure_time_mins": "19:16"},
+    {"id": "BK_04", "operator": "KSRTC", "direction": "Bengaluru→Kochi", "departure_time_mins": "19:24"},
+    {"id": "BK_05", "operator": "KSRTC", "direction": "Bengaluru→Kochi", "departure_time_mins": "19:32"},
+    {"id": "BK_06", "operator": "KSRTC", "direction": "Bengaluru→Kochi", "departure_time_mins": "19:40"},
+    {"id": "BK_07", "operator": "KSRTC", "direction": "Bengaluru→Kochi", "departure_time_mins": "19:48"},
+    {"id": "BK_08", "operator": "KSRTC", "direction": "Bengaluru→Kochi", "departure_time_mins": "19:56"},
+    {"id": "BK_09", "operator": "KSRTC", "direction": "Bengaluru→Kochi", "departure_time_mins": "20:04"},
+    {"id": "BK_10", "operator": "KSRTC", "direction": "Bengaluru→Kochi", "departure_time_mins": "20:12"},
+    {"id": "KB_01", "operator": "KSRTC", "direction": "Kochi→Bengaluru", "departure_time_mins": "19:00"},
+    {"id": "KB_02", "operator": "KSRTC", "direction": "Kochi→Bengaluru", "departure_time_mins": "19:08"},
+    {"id": "KB_03", "operator": "KSRTC", "direction": "Kochi→Bengaluru", "departure_time_mins": "19:16"},
+    {"id": "KB_04", "operator": "KSRTC", "direction": "Kochi→Bengaluru", "departure_time_mins": "19:24"},
+    {"id": "KB_05", "operator": "KSRTC", "direction": "Kochi→Bengaluru", "departure_time_mins": "19:32"},
+    {"id": "KB_06", "operator": "KSRTC", "direction": "Kochi→Bengaluru", "departure_time_mins": "19:40"},
+    {"id": "KB_07", "operator": "KSRTC", "direction": "Kochi→Bengaluru", "departure_time_mins": "19:48"},
+    {"id": "KB_08", "operator": "KSRTC", "direction": "Kochi→Bengaluru", "departure_time_mins": "19:56"},
+    {"id": "KB_09", "operator": "KSRTC", "direction": "Kochi→Bengaluru", "departure_time_mins": "20:04"},
+    {"id": "KB_10", "operator": "KSRTC", "direction": "Kochi→Bengaluru", "departure_time_mins": "20:12"}
+  ]
+}

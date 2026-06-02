@@ -1,19 +1,5 @@
 from __future__ import annotations
 
-import os
-import sys
-
-# Dynamically find the project root directory and inject it into sys.path
-# This ensures absolute 'src.' imports work seamlessly both locally and on Streamlit Cloud
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-if PROJECT_ROOT not in sys.path:
-    sys.path.insert(0, PROJECT_ROOT)
-
-# --- Your existing imports continue below ---
-import streamlit as st
-from src.models import OperationalWeights, ScenarioInput
-# ... the rest of your imports
-
 """
 Streamlit Application Frontend
 
@@ -26,14 +12,20 @@ See ADR/0005_user_interface_design.md for architectural decisions.
 Launch with: streamlit run src/app.py
 """
 
-from __future__ import annotations
-
 import json
+import os
 from pathlib import Path
+import sys
 from typing import Any, Dict, List, Optional
 
-import streamlit as st
 import pandas as pd
+import streamlit as st
+
+# Dynamically find the project root directory and inject it into sys.path
+# This ensures absolute 'src.' imports work seamlessly both locally and on Streamlit Cloud
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
 
 from src.models import OperationalWeights, ScenarioInput
 from src.engine import compute_travel_timeline
